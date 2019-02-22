@@ -1,0 +1,100 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+apply from: 'dependencies.gradle'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.tech.jpmorgan"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Android dependencies
+    implementation libs.design
+    implementation libs.appCompatV7
+    implementation libs.archCompRuntime
+    implementation libs.archCompExtensions
+    kapt libs.archCompCompiler
+    implementation libs.cardviewV7
+    implementation libs.recyclerviewV7
+    implementation libs.preferenceV14
+    implementation libs.supportV4
+    implementation libs.multidex
+    implementation libs.constraintLayout
+    implementation testLibs.espressoIdlingRes
+
+    // Repository dependencies
+    implementation libs.otto
+    implementation libs.injectX
+    implementation libs.dagger2
+    implementation libs.daggerAndroid
+    implementation libs.daggerAndroidSupport
+    kapt libs.dagger2Compiler
+    kapt libs.daggerAndroidProcessor
+    implementation libs.icepick
+    kapt libs.icepickProcessor
+    implementation libs.okHttp
+    implementation libs.picasso
+    implementation libs.facebookSdk
+    implementation libs.threetenabp
+    implementation libs.caligraphy
+    implementation libs.rxAndroid2
+    implementation libs.rxJava2
+    implementation libs.lottie
+    implementation libs.kotlin
+    implementation libs.kotlinXCoroutines
+    implementation libs.kotlinXCoroutinesAndroid
+    implementation libs.retrofit
+    implementation libs.retrofitMoshi
+    implementation libs.retrofitRxAdapter
+    implementation libs.loggingInterceptor
+    implementation libs.moshi
+    kapt libs.moshiAndroidProcessor
+
+    // Unit Tests
+    testImplementation testLibs.hamcrestIntegration
+    testImplementation testLibs.hamcrestCore
+    testImplementation testLibs.hamcrestLibrary
+    testImplementation testLibs.junit
+    testImplementation testLibs.junitParams
+    testImplementation testLibs.mockito2
+    testImplementation testLibs.kluent
+    testImplementation testLibs.robolectric
+    testImplementation testLibs.shadowsMultidex
+    testImplementation testLibs.assertj
+    testImplementation testLibs.mockitoInline
+
+    androidTestImplementation testLibs.testRunner
+    androidTestImplementation libs.adjust
+    androidTestImplementation libs.dagger2
+    androidTestImplementation libs.daggerAndroid
+    androidTestImplementation libs.daggerAndroidSupport
+    kaptAndroidTest libs.dagger2Compiler
+    kaptAndroidTest libs.daggerAndroidProcessor
+    androidTestCompileOnly libs.icepickProcessor
+    kaptAndroidTest libs.icepickProcessor
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:design:28.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
