@@ -1,8 +1,8 @@
-package com.tech.jpmorgan
+package com.tech.jpmorgan.ui.album
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import com.tech.jpmorgan.ui.album.AlbumFragment
+import com.tech.jpmorgan.R
 
 class AlbumActivity : AppCompatActivity() {
 
