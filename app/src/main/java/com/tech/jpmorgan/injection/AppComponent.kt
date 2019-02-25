@@ -3,6 +3,7 @@ package com.tech.jpmorgan.injection
 import android.app.Application
 import com.App
 import com.tech.jpmorgan.api.ApiModule
+import com.tech.jpmorgan.db.DbModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
@@ -13,7 +14,8 @@ import javax.inject.Singleton
     AndroidInjectionModule::class,
     AppModule::class,
     ActivityModule::class,
-    ApiModule::class
+    ApiModule::class,
+    DbModule::class
 ])
 
 interface AppComponent {

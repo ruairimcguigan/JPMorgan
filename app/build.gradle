@@ -66,6 +66,8 @@ dependencies {
     implementation libs.retrofit
     implementation libs.retrofitMoshi
     implementation libs.retrofitRxAdapter
+    implementation libs.roomDb
+    kapt libs.roomCompiler
     implementation libs.loggingInterceptor
     implementation libs.moshi
     kapt libs.moshiAndroidProcessor
