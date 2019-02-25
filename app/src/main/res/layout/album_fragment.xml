@@ -8,14 +8,13 @@
         android:layout_height="match_parent"
         tools:context=".ui.album.AlbumFragment">
 
-    <TextView
-            android:id="@+id/message"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="AlbumFragment"
-            baseInjectorApplication:layout_constraintBottom_toBottomOf="parent"
-            baseInjectorApplication:layout_constraintEnd_toEndOf="parent"
-            baseInjectorApplication:layout_constraintStart_toStartOf="parent"
-            baseInjectorApplication:layout_constraintTop_toTopOf="parent"/>
 
+    <android.support.v7.widget.RecyclerView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            baseInjectorApplication:layout_constraintTop_toTopOf="parent"
+            baseInjectorApplication:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            baseInjectorApplication:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp" baseInjectorApplication:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="8dp" android:id="@+id/album_list"/>
 </android.support.constraint.ConstraintLayout>
