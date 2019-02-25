@@ -7,7 +7,7 @@ import dagger.android.ContributesAndroidInjector
 
 @Suppress("unused")
 @Module
-abstract class ActivityModule {
+abstract class ActivityBuildingModule {
     @ContributesAndroidInjector(modules = [FragmentBuildersModule::class])
     abstract fun contributeAlbumActivity(): AlbumActivity
 }

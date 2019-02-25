@@ -11,7 +11,7 @@ object DbModule {
 
     @JvmStatic
     @Provides
-    fun appDatabase(application: Application): AppDb {
+    fun provideDatabase(application: Application): AppDb {
         return Room.databaseBuilder(
             application.applicationContext,
             AppDb::class.java,
@@ -21,5 +21,5 @@ object DbModule {
 
     @JvmStatic
     @Provides
-    fun albumDao(appDatabase: AppDb): AlbumDao = appDatabase.albumDao()
+    fun provideAlbumDao(appDatabase: AppDb): AlbumDao = appDatabase.albumDao()
 }

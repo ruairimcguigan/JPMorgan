@@ -1,16 +1,15 @@
 package com.tech.jpmorgan.ui.album
 
-import android.arch.lifecycle.ViewModelProvider
-import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
 import com.tech.jpmorgan.R
 import com.tech.jpmorgan.injection.Injectable
-import com.tech.jpmorgan.ui.viewmodel.ViewModelFactory
 import javax.inject.Inject
 
 class AlbumFragment : Fragment(), Injectable {
