@@ -6,7 +6,7 @@ Tech test - Senior Android
 * Kotlin
 * Androidx
 * Retrofit
-* JetPack, including Livedata, ViewModel Room
+* Architecture Components incl Livedata, ViewModel Room
 * Moshi
 * Dagger
 * Mockito
