@@ -12,7 +12,7 @@ import com.tech.jpmorgan.util.AppExecutors
 import com.tech.jpmorgan.vo.Resource
 
 /**
- * A generic class that can provide a resource backed by both the sqlite database and the network. */
+ * A generic class that can provide a resource backed by both the database and the network. */
 abstract class DataResource<ResultType, RequestType>
 @MainThread constructor(private val appExecutors: AppExecutors) {
 

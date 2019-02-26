@@ -31,5 +31,4 @@ class AlbumRepoTest {
         `when`(db.runInTransaction(ArgumentMatchers.any())).thenCallRealMethod()
         repository = AlbumRepository(InstantAppExecutors(), dao, api)
     }
-
 }

@@ -11,16 +11,13 @@ import com.squareup.moshi.Json
 )
 data class Album(
 
-//    @Json(name = "userId")
-    @SerializedName("userId")
+    @Json(name = "userId")
     @NonNull
     @PrimaryKey
     val userId: Int,
 
-//    @Json(name = "id")
-    @SerializedName("id")
+    @Json(name = "id")
     val id: Int?,
 
-//    @Json(name = "title")
-    @SerializedName("title")
+    @Json(name = "title")
     val title: String?)
