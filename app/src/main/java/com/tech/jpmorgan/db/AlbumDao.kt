@@ -3,13 +3,14 @@ package com.tech.jpmorgan.db
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
+import androidx.room.OnConflictStrategy.REPLACE
 import androidx.room.Query
 import com.tech.jpmorgan.vo.Album
 
 @Dao
 interface AlbumDao {
 
-    @Insert
+    @Insert(onConflict = REPLACE)
     fun insertAll(albums: List<Album>)
 
     @Query("SELECT * FROM Album")

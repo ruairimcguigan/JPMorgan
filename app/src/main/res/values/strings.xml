@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">JPMorgan</string>
     <string name="app_db_name">jp_morgan_db</string>
+    <string name="app_base_url">https://jsonplaceholder.typicode.com/</string>
 </resources>

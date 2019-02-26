@@ -86,4 +86,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     androidTestImplementation 'com.squareup.rx.idler:rx2-idler:0.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+//    implementation "com.github.leonardoxh:retrofit2-livedata-adapter:1.1.2"
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+
 }

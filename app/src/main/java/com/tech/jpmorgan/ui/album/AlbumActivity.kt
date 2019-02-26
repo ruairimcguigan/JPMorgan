@@ -19,5 +19,4 @@ class AlbumActivity : AppCompatActivity(), HasSupportFragmentInjector {
     }
 
     override fun supportFragmentInjector() = dispatchingAndroidInjector
-
 }

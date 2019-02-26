@@ -12,7 +12,6 @@ import javax.inject.Singleton
 
 @Singleton
 class AlbumRepository @Inject constructor(
-    private val db: AppDb,
     private val appExcecutors: AppExecutors,
     private val albumDao: AlbumDao,
     private val albumApi: Api
