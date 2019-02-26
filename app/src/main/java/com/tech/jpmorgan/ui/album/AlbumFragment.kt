@@ -23,13 +23,14 @@ class AlbumFragment : Fragment(), Injectable {
     lateinit var viewModel: AlbumViewModel
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?): View {
         return inflater.inflate(R.layout.album_fragment, container, false)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View,
+                               savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProviders.of(this, viewModelFactory).get(AlbumViewModel::class.java)
         fetchAlbums()
@@ -37,9 +38,7 @@ class AlbumFragment : Fragment(), Injectable {
 
     private fun fetchAlbums(){
         viewModel.fetchAlbums().observe(viewLifecycleOwner, Observer { repos ->
-                repos.data?.let {
-                    setAlbumList(it)
-                }
+                repos.data?.let { setAlbumList(it) }
         })
     }
 
