@@ -1,5 +1,6 @@
 package com.tech.jpmorgan.db
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
@@ -12,7 +13,7 @@ interface AlbumDao {
     fun insertAll(albums: List<Album>)
 
     @Query("SELECT * FROM Album")
-    fun getAlbums(): List<Album>
+    fun getAlbums(): LiveData<List<Album>>
 
     @Query("SELECT COUNT(*) FROM Album")
     fun count(): Int

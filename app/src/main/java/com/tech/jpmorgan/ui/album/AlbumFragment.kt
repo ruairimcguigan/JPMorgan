@@ -1,7 +1,6 @@
 package com.tech.jpmorgan.ui.album
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,10 +13,8 @@ import javax.inject.Inject
 
 class AlbumFragment : Fragment(), Injectable {
 
-    @Inject
-    lateinit var viewModelFactory: ViewModelProvider.Factory
-    private lateinit var viewModel: AlbumViewModel
-
+    @Inject lateinit var viewModelFactory: ViewModelProvider.Factory
+    lateinit var viewModel: AlbumViewModel
 
     companion object {
         fun newInstance() = AlbumFragment()
@@ -37,25 +34,11 @@ class AlbumFragment : Fragment(), Injectable {
         viewModel = ViewModelProviders.of(this, viewModelFactory)
             .get(AlbumViewModel::class.java)
 
-        if (viewModel != null) {
-            Log.d(javaClass.simpleName, "all good")
-        } else {
-            Log.d(javaClass.simpleName, "not good")
-        }
+        fetchAlbums()
+
     }
 
-//    override fun onV(savedInstanceState: Bundle?) {
-//        super.onActivityCreated(savedInstanceState)
-////        viewModel = ViewModelProviders.of(this).get(AlbumViewModel::class.java)
-////        viewModel = ViewModelProviders.of(this, viewModelFactory).get(AlbumViewModel::class.java)
-//        viewModel = ViewModelProviders.of(this, viewModelFactory)
-//            .get(AlbumViewModel::class.java)
-//
-//        if (viewModel != null) {
-//            Log.d(javaClass.simpleName, "all good")
-//        } else {
-//            Log.d(javaClass.simpleName, "not good")
-//        }
-//    }
+    private fun fetchAlbums(){
 
+    }
 }

@@ -13,8 +13,8 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             baseInjectorApplication:layout_constraintTop_toTopOf="parent"
-            baseInjectorApplication:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            baseInjectorApplication:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            android:layout_marginBottom="8dp" baseInjectorApplication:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginTop="8dp" android:id="@+id/album_list"/>
+            baseInjectorApplication:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="@dimen/grid_8"
+            baseInjectorApplication:layout_constraintStart_toStartOf="parent" android:layout_marginStart="@dimen/grid_8"
+            android:layout_marginBottom="@dimen/grid_8" baseInjectorApplication:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="@dimen/grid_8" android:id="@+id/album_list"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
