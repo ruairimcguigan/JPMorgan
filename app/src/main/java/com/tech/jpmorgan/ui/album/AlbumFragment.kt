@@ -37,12 +37,14 @@ class AlbumFragment : Fragment(), Injectable {
 
     private fun fetchAlbums(){
         viewModel.fetchAlbums().observe(viewLifecycleOwner, Observer { repos ->
-                repos.data?.let { data -> setAlbumList(data) }
+                repos.data?.let {
+                    setAlbumList(it)
+                }
         })
     }
 
     private fun setAlbumList(data: List<Album>) = with(album_list) {
-        adapter = AlbumAdapter(data)
+        adapter = AlbumAdapter(data.sortedWith(compareBy(Album::title)))
         layoutManager = LinearLayoutManager(activity)
         addItemDecoration(DividerItemDecoration(activity, VERTICAL))
         setHasFixedSize(true)
